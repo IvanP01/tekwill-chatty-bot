@@ -25,7 +25,7 @@ public class ChattyBotApplication {
         System.out.print("Tell me your real age, and let's see if my guess is right: \n>> ");
         int realUserAge = scanner.nextInt();
 
-        realUserAge = getRealUserAge();
+
         if (realUserAge == userAge) {
             System.out.println("\uD83D\uDE04 Yaaay! In the end, I'm stil capable of doing something! \uD83D\uDE0D ");
         } else {
@@ -76,7 +76,4 @@ public class ChattyBotApplication {
                 "\uD83D\uDE0D\" - heart eyes");*/
     }
 
-    private static int getRealUserAge() {
-        return 0;
-    }
 }
