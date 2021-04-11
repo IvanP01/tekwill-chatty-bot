@@ -25,7 +25,6 @@ public class ChattyBotApplication {
         System.out.print("Tell me your real age, and let's see if my guess is right: \n>> ");
         int realUserAge = scanner.nextInt();
 
-
         if (realUserAge == userAge) {
             System.out.println("\uD83D\uDE04 Yaaay! In the end, I'm stil capable of doing something! \uD83D\uDE0D ");
         } else {
@@ -55,16 +54,41 @@ public class ChattyBotApplication {
             System.out.print("Tell me your real age, and let's see if my guess is right: ");
             realUserAge = scanner.nextInt();
         }
-
         System.out.println("So," + nameUser + ", your age is " + realUserAge + ". That's the most perfect time to learn programing! \n");
+
+        //
         System.out.print("You know what else I can do? I can count to any number you want! Tell me whento stop: \n>> ");
         number = scanner.nextInt();
-
         for (int i = 0; i <= number; i++) {
             System.out.println(i);
         }
 
-
+        //
+        System.out.println("Lets test your programing knowledge.");
+        System.out.println("Why do we use methods?");
+        System.out.println("1. To repeat a statement multiple times");
+        System.out.println("2. To decompose a program into several small subroutines.");
+        System.out.println("3. To determine the execution time of a program.");
+        System.out.print("4. To interrupt the execution of a program. \n>>");
+        number = scanner.nextInt();
+        while (number!=2 ){
+            System.out.println("\uD83D\uDE1E Please try  again.");
+            number = scanner.nextInt();
+        }
+        switch (number){
+            case 1:
+                System.out.println("\uD83D\uDE1E Please try  again.");
+                break;
+            case 2:
+                System.out.println("Heeey Johnny you're right! But it's time for me to go to sleep. Wake me up later when you're bored!");
+                break;
+            case 3:
+            case 4:
+                System.out.println("\uD83D\uDE1E Please try  again.");
+                break;
+            default:
+                System.out.println("Invalid Key response!");
+        }
 // To Do
       /*  System.out.println("\uD83D\uDC4B\" - waving hand\n" +
                 "\uD83E\uDD16\" - robot\n" +
@@ -75,5 +99,4 @@ public class ChattyBotApplication {
                 "\uD83D\uDE1E\" - disappointed face\n" +
                 "\uD83D\uDE0D\" - heart eyes");*/
     }
-
 }
