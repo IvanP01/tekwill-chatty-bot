@@ -23,44 +23,46 @@ public class ChattyBotApplication {
         System.out.println(nameUser + "! " + "Using magic I guess, your age is " + userAge + "!");
         System.out.println("\uD83D\uDE10 But I'm simple bot, and I might be wrong. \uD83D\uDE04\n");
 
-        System.out.print("Tell me your real age, and let's see if my guess is right: \n>> ");
-        int realUserAge = scanner.nextInt();
+        int realUserAge = -1;
+        while (realUserAge > 120 || realUserAge < 0) {
+            System.out.print("Tell me your real age, and let's see if my guess is right: \n>> ");
+            realUserAge = scanner.nextInt();
+
+            if (realUserAge < 0) {
+                System.out.println("Heeeeeeeeey, somebady must be joking here. You can't be that young! Please try again!");
+            }
+            if (realUserAge > 120) {
+                System.out.println("\"Heeeeeeeeey, somebady must be joking here. You can't be that old! Please try again!\"");
+            }
+        }
 
         if (realUserAge == userAge) {
             System.out.println("\uD83D\uDE04 Yaaay! In the end, I'm stil capable of doing something! \uD83D\uDE0D ");
-        } else if (realUserAge >= 26 && realUserAge <= 55) {
+        } else {
             System.out.println("\uD83D\uDE1E Ohh! Sorry " + nameUser + ", I'mstill learning. I hope you stil belive in magic!");
-        } else if (realUserAge < 0) {
-            System.out.println("Heeeeeeeeey, somebady must be joking here. You can't be that young! Please try again!");
-        } else System.out.println("Tell me your real age, and let's see if my guess is right: ");
-        realUserAge = scanner.nextInt();
-
-        while (realUserAge > 0 && realUserAge < 120) {
-            if (realUserAge < 7) {
-                System.out.println("Wow " + nameUser + "! " + "You are very young, just " + realUserAge + "years old\n" +
-                        "and you're already running an app by yourself. That's sweet! Try and learn some programming,\n" +
-                        "maybe you'll be the Iron Man of our century?");
-            } else if (realUserAge < 15) {
-                System.out.println("Hey " + nameUser + ", " + "you're just " + realUserAge + " years old, what a good \n" +
-                        " age to gain some basic knowledge in programing!");
-            } else if (realUserAge < 55) {
-                System.out.println("Hey " + nameUser + ", " + "you're just " + realUserAge + " years old, what a good \n" +
-                        " age to gain some basic knowledge in programing!");
-            } else if (realUserAge < 120) {
-                System.out.println("Oh my, " + nameUser + ", " + "you age is " + realUserAge + ". " + "You have many years\n" +
-                        "ahead! It's never too late to learn programming!");
-            }
+        }
+        if (realUserAge < 7) {
+            System.out.println("Wow " + nameUser + "! " + "You are very young, just " + realUserAge + "years old\n" +
+                    "and you're already running an app by yourself. That's sweet! Try and learn some programming,\n" +
+                    "maybe you'll be the Iron Man of our century?");
+        } else if (realUserAge < 15) {
+            System.out.println("Hey " + nameUser + ", " + "you're just " + realUserAge + " years old, what a good \n" +
+                    " age to gain some basic knowledge in programing!");
+        } else if (realUserAge < 55) {
+            System.out.println("Hey " + nameUser + ", " + "you're just " + realUserAge + " years old, what a good \n" +
+                    " age to gain some basic knowledge in programing!");
+        } else if (realUserAge < 120) {
+            System.out.println("Oh my, " + nameUser + ", " + "you age is " + realUserAge + ". " + "You have many years\n" +
+                    "ahead! It's never too late to learn programming!");
         }
         System.out.println("So," + nameUser + ", your age is " + realUserAge + ". That's the most perfect time to learn programing! \n");
 
-        //
         System.out.print("You know what else I can do? I can count to any number you want! Tell me whento stop: \n>> ");
         number = scanner.nextInt();
         for (int i = 0; i <= number; i++) {
             System.out.println(i);
         }
 
-        //
         System.out.println("Lets test your programing knowledge.");
         System.out.println("Why do we use methods?");
         System.out.println("1. To repeat a statement multiple times");
@@ -75,12 +77,3 @@ public class ChattyBotApplication {
         System.out.println("Heeey Johnny you're right! But it's time for me to go to sleep. Wake me up later when you're bored!");
     }
 }
-// To Do
-      /*  System.out.println("\uD83D\uDC4B\" - waving hand\n" +
-                "\uD83E\uDD16\" - robot\n" +
-                "\uD83D\uDE32\" - astonished face\n" +
-                "\uD83E\uDD14\" - thinking face\n" +
-                "\uD83D\uDE04\" - smiling face\n" +
-                "\uD83D\uDE10\" - serious face\n" +
-                "\uD83D\uDE1E\" - disappointed face\n" +
-                "\uD83D\uDE0D\" - heart eyes");*/
